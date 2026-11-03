@@ -1,0 +1,10 @@
+Package: myboulpackage
+Type: Package
+Title: Arithmetic Mean Calculator
+Version: 0.0.0.9000
+Authors@R: Badinter Schweitzer <bschweitzer@usf.edu>    
+Description: Computes the arithmetic mean of a numeric vector.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Config/roxygen2/version: 8.1.1
