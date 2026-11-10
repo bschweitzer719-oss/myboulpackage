@@ -1,4 +1,4 @@
-
+https://discoverantilleancuisine.wordpress.com/2026/11/09/assignment-11-debugging-and-defensive-programming-in-r/
 Assignment #11: Debugging and Defensive Programming in R
 # Debugging and Defensive Programming in
 # Background & Buggy Code
