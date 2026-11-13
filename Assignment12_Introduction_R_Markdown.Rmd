@@ -1,0 +1,81 @@
+---
+title: "My R Markdown Primer"
+author: "Badinter Schweitzer"
+date: "2026-11-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Objective of this assignment
+Acquire foundational knowledge of R Markdown authoring and document structure, and practice embedding R code, narrative text, and LaTeX mathematics within a single file. Then compile the R Markdown document to HTML (or PDF) and compare the source with the output. Finally, reflect on how the Markdown workflow facilitates reproducible analysis.
+
+## A concise introduction to R Markdown.
+R Markdown is a way to create reports that can be repeated and updated using R. So we use it to put R code and results into slides, PDF files, HTML pages, Word documents, and make reports.
+
+```{r cars}
+# Load the packages
+library(ggplot2)
+library(tidyverse)
+```
+
+## Hurricane Data Analysis
+Hurricane data is examined using the R program. This study looks at the data and explains the main features of hurricane activity. The results help us understand the patterns found in the data.
+
+## LaTeX Equations
+$\alpha + \beta = \gamma$
+
+Display equation:
+\alpha + \beta = \gamma
+
+## Load the dataset
+```{r}
+# load hurricane dataset
+storm <- read.table("hurricane.txt", header = FALSE)
+
+names(storm) <- c("Year", "Month", "Day", "Hour",
+                  "Category", "Name", "Longitude",
+                  "Wind", "Pressure")
+
+head(storm)
+```
+
+
+```{r}
+# View structure
+str(storm)
+
+# Summarise(storm)
+summary(storm)
+
+```
+The dataset contains 10493 obsertions(nrow) across 10 variables(columns).
+
+# Generate a plot for the hurricane dataset.
+
+```{r}
+ggplot(storm, aes(x = Year)) +
+  geom_histogram(fill = "#93ffe8", color = "#ffa500", bins = 25, alpha = 0.75) +
+  labs(
+    title = "Hurricane Pressure Over Time",
+    x = "Year",
+    y = "Count"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5, color = "#eb5406")
+  )
+```
+# A simple analysis of the visualization
+This visualization was generated with ggplot2, a widely used data‑visualization package in R. It presents the annual distribution of storm events, enabling researchers to observe temporal trends and evaluate whether storm frequency is increasing, decreasing, or remaining stable over time.
+
+## A concluding reflection on your experience using R Markdown vs. writing plain reports.
+Fortunately, from my experience, using R Markdown makes writing reports much easier than writing plain reports, especially in terms of how the text is organized and how it looks. The main benefit is that it keeps the main content separate from the extra formatting, so we can focus on what we are doing without jumping to other sections, while keeping the style consistent throughout the document.
+
+
+Here is the link to the dataset:
+https://1drv.ms/f/c/519baaea610e4177/IgBDU3yPg7HPT4kNA6NgaWQfAfSaVxRavzPX_MC_k-Pg4sQ?e=McIhwV
+
+
+
