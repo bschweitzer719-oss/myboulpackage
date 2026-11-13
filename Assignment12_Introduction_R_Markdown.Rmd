@@ -67,7 +67,8 @@ ggplot(storm, aes(x = Year)) +
     plot.title = element_text(hjust = 0.5, color = "#eb5406")
   )
 ```
-# A simple analysis of the visualization
+
+## A simple analysis of the visualization
 This visualization was generated with ggplot2, a widely used data‑visualization package in R. It presents the annual distribution of storm events, enabling researchers to observe temporal trends and evaluate whether storm frequency is increasing, decreasing, or remaining stable over time.
 
 ## A concluding reflection on your experience using R Markdown vs. writing plain reports.
